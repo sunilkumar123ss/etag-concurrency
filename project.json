@@ -1,0 +1,8 @@
+{
+  "slug": "etag-concurrency",
+  "title": "ETag Concurrency",
+  "description": "Prevent stale JSON updates with atomic compare-and-replace.",
+  "category": "backend",
+  "demo_args": [],
+  "expected_exit": 0
+}
