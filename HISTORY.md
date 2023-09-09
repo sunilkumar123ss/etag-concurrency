@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 1 of 17. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 2 of 17. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -13,7 +13,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | Stage | Synthetic date | Change |
 | --- | --- | --- |
 | 1 | 2023-06-01T13:48:25+05:30 | add repository metadata and Python ignore rules (present) |
-| 2 | 2023-09-09T14:33:19+05:30 | add module imports, constants, and scope documentation (later stage) |
+| 2 | 2023-09-09T14:33:19+05:30 | add module imports, constants, and scope documentation (present) |
 | 3 | 2023-10-08T14:44:53+05:30 | define missing and stale precondition errors (later stage) |
 | 4 | 2023-10-13T11:06:06+05:30 | validate and encode JSON document values (later stage) |
 | 5 | 2024-01-21T12:17:16+05:30 | implement versioned ETags and atomic compare-and-replace (later stage) |
