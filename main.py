@@ -5,3 +5,9 @@ import json
 import threading
 
 
+class PreconditionRequired(ValueError):
+    pass
+
+
+class PreconditionFailed(ValueError):
+    pass
