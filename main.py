@@ -56,3 +56,21 @@ class VersionedDocument:
             self._body = encoded
             self._version += 1
             return self._etag()
+
+
+def main():
+    argparse.ArgumentParser(description=__doc__).parse_args()
+    document = VersionedDocument({"title": "Synthetic draft", "published": False})
+    initial, etag = document.get()
+    updated_etag = document.replace({"title": "Synthetic draft", "published": True}, etag)
+    try:
+        document.replace({"title": "Stale edit"}, etag)
+    except PreconditionFailed:
+        stale_outcome = "rejected"
+    current, _ = document.get()
+    print(json.dumps({"initial": initial, "updated": current, "etag_changed": etag != updated_etag,
+                      "stale_update": stale_outcome}, indent=2))
+
+
+if __name__ == "__main__":
+    main()
