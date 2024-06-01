@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 6 of 17. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 7 of 17. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -18,7 +18,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 4 | 2023-10-13T11:06:06+05:30 | validate and encode JSON document values (present) |
 | 5 | 2024-01-21T12:17:16+05:30 | implement versioned ETags and atomic compare-and-replace (present) |
 | 6 | 2024-01-26T17:34:06+05:30 | add the deterministic demonstration and command-line entry point (present) |
-| 7 | 2024-06-01T16:45:47+05:30 | test matching tag updates (later stage) |
+| 7 | 2024-06-01T16:45:47+05:30 | test matching tag updates (present) |
 | 8 | 2024-08-08T13:37:30+05:30 | test stale write does not replace (later stage) |
 | 9 | 2024-09-02T13:35:41+05:30 | test missing and weak tags rejected (later stage) |
 | 10 | 2025-01-18T17:31:43+05:30 | test get returns detached snapshot (later stage) |
