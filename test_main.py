@@ -11,6 +11,12 @@ class ETagTests(unittest.TestCase):
         self.assertNotEqual(new_tag, tag)
         self.assertEqual(doc.get(), ({"x": 2}, new_tag))
 
+    def test_stale_write_does_not_replace(self):
+        doc = VersionedDocument({"x": 1})
+        _, tag = doc.get()
+        doc.replace({"x": 2}, tag)
+        with self.assertRaises(PreconditionFailed): doc.replace({"x": 3}, tag)
+        self.assertEqual(doc.get()[0], {"x": 2})
 
 
 
