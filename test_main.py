@@ -18,6 +18,10 @@ class ETagTests(unittest.TestCase):
         with self.assertRaises(PreconditionFailed): doc.replace({"x": 3}, tag)
         self.assertEqual(doc.get()[0], {"x": 2})
 
+    def test_missing_and_weak_tags_rejected(self):
+        doc = VersionedDocument({})
+        with self.assertRaises(PreconditionRequired): doc.replace({}, None)
+        with self.assertRaises(PreconditionFailed): doc.replace({}, "W/" + doc.get()[1])
 
 
 
