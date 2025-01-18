@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 9 of 17. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 10 of 17. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -21,7 +21,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 7 | 2024-06-01T16:45:47+05:30 | test matching tag updates (present) |
 | 8 | 2024-08-08T13:37:30+05:30 | test stale write does not replace (present) |
 | 9 | 2024-09-02T13:35:41+05:30 | test missing and weak tags rejected (present) |
-| 10 | 2025-01-18T17:31:43+05:30 | test get returns detached snapshot (later stage) |
+| 10 | 2025-01-18T17:31:43+05:30 | test get returns detached snapshot (present) |
 | 11 | 2025-02-28T09:44:29+05:30 | test aba and no op still change version (later stage) |
 | 12 | 2025-08-23T10:20:21+05:30 | test invalid json does not mutate (later stage) |
 | 13 | 2025-12-27T16:53:32+05:30 | test two writers only one succeeds (later stage) |

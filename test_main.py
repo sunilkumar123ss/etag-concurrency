@@ -23,6 +23,13 @@ class ETagTests(unittest.TestCase):
         with self.assertRaises(PreconditionRequired): doc.replace({}, None)
         with self.assertRaises(PreconditionFailed): doc.replace({}, "W/" + doc.get()[1])
 
+    def test_get_returns_detached_snapshot(self):
+        original = {"items": [1]}
+        doc = VersionedDocument(original)
+        original["items"].append(2)
+        value, _ = doc.get()
+        value["items"].append(3)
+        self.assertEqual(doc.get()[0], {"items": [1]})
 
 
 
