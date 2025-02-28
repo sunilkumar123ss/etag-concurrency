@@ -31,6 +31,14 @@ class ETagTests(unittest.TestCase):
         value["items"].append(3)
         self.assertEqual(doc.get()[0], {"items": [1]})
 
+    def test_aba_and_no_op_still_change_version(self):
+        doc = VersionedDocument("a")
+        _, first = doc.get()
+        second = doc.replace("b", first)
+        third = doc.replace("a", second)
+        self.assertNotEqual(first, third)
+        fourth = doc.replace("a", third)
+        self.assertNotEqual(third, fourth)
 
 
 
