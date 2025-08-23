@@ -40,6 +40,12 @@ class ETagTests(unittest.TestCase):
         fourth = doc.replace("a", third)
         self.assertNotEqual(third, fourth)
 
+    def test_invalid_json_does_not_mutate(self):
+        doc = VersionedDocument({})
+        before = doc.get()
+        for value in ({"x": float("nan")}, {1: "bad"}, {"x": {1, 2}}):
+            with self.subTest(value=value), self.assertRaises(ValueError): doc.replace(value, before[1])
+            self.assertEqual(doc.get(), before)
 
 
 
