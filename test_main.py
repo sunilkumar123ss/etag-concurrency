@@ -47,6 +47,24 @@ class ETagTests(unittest.TestCase):
             with self.subTest(value=value), self.assertRaises(ValueError): doc.replace(value, before[1])
             self.assertEqual(doc.get(), before)
 
+    def test_two_writers_only_one_succeeds(self):
+        doc = VersionedDocument(0)
+        _, tag = doc.get()
+        barrier = threading.Barrier(2)
+        outcomes = []
+        lock = threading.Lock()
+        def writer(value):
+            barrier.wait()
+            try:
+                doc.replace(value, tag)
+                outcome = "updated"
+            except PreconditionFailed:
+                outcome = "stale"
+            with lock: outcomes.append(outcome)
+        threads = [threading.Thread(target=writer, args=(value,)) for value in (1, 2)]
+        for thread in threads: thread.start()
+        for thread in threads: thread.join()
+        self.assertCountEqual(outcomes, ["updated", "stale"])
 
 
 if __name__ == '__main__':
