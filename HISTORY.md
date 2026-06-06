@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 14 of 17. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 15 of 17. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -26,6 +26,6 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 12 | 2025-08-23T10:20:21+05:30 | test invalid json does not mutate (present) |
 | 13 | 2025-12-27T16:53:32+05:30 | test two writers only one succeeds (present) |
 | 14 | 2026-02-14T17:00:03+05:30 | add isolated tests, demo, and help verification (present) |
-| 15 | 2026-06-06T14:32:54+05:30 | add the hosted Python verification workflow (later stage) |
+| 15 | 2026-06-06T14:32:54+05:30 | add the hosted Python verification workflow (present) |
 | 16 | 2026-06-30T18:58:46+05:30 | record the completed local verification and its limits (later stage) |
 | 17 | 2026-08-23T11:40:34+05:30 | Document usage, limitations and the disclosed reconstructed timeline (later stage) |
